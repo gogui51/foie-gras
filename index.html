@@ -13,6 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="app.js" defer></script>
+  <script src="wake-lock.js" defer></script>
 </head>
 <body>
   <div class="site-shell">
@@ -20,6 +21,10 @@
       <a href="#haut" class="brand" aria-label="Retour en haut de la page"><span class="brand-mark">✳</span><span>LE CARNET <b>de cuisine</b></span></a>
       <div class="top-actions">
         <span class="issue">RECETTE 001 — MAISON</span>
+        <button class="wake-toggle" id="wakeToggle" type="button" aria-pressed="false" title="Garder l’écran allumé pendant la consultation de la recette">
+          <span class="wake-toggle-icon" aria-hidden="true">☀</span>
+          <span class="wake-toggle-copy"><span id="wakeLabel">Écran allumé</span><small id="wakeStatus" aria-live="polite">Vérification…</small></span>
+        </button>
         <button class="text-button print-btn" id="printBtn" type="button" aria-label="Imprimer la recette"><span aria-hidden="true">↗</span> Imprimer</button>
       </div>
     </header>
