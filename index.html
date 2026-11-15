@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#542b35">
+  <meta name="description" content="Une recette de foie gras maison, guidée étape par étape, avec quantités adaptées et minuteurs intégrés.">
+  <title>Foie gras maison — Le carnet de cuisine</title>
+  <link rel="icon" type="image/svg+xml" href="icon.svg">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a href="#haut" class="brand" aria-label="Retour en haut de la page"><span class="brand-mark">✳</span><span>LE CARNET <b>de cuisine</b></span></a>
+      <div class="top-actions">
+        <span class="issue">RECETTE 001 — MAISON</span>
+        <button class="text-button print-btn" id="printBtn" type="button" aria-label="Imprimer la recette"><span aria-hidden="true">↗</span> Imprimer</button>
+      </div>
+    </header>
+
+    <main id="haut">
+      <section class="hero" aria-labelledby="heroTitle">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-line"></span> LA RECETTE À TRANSMETTRE</div>
+          <h1 id="heroTitle">Le foie gras<br><em>maison.</em></h1>
+          <p class="hero-lead">Quelques ingrédients, un peu de patience, et le plaisir des choses faites soi-même.</p>
+          <div class="hero-meta"><span>CUISSON DANS L’EAU</span><i></i><span>HORS DU FEU</span></div>
+          <a class="hero-cta" href="#preparer">Commencer la recette <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="hero-art-label">LES BONNES CHOSES<br>PRENNENT LEUR TEMPS</div>
+          <svg class="plate-art" viewBox="0 0 520 470" role="presentation">
+            <defs>
+              <radialGradient id="plate" cx="45%" cy="38%" r="65%"><stop offset="0%" stop-color="#fcf8ee"/><stop offset="75%" stop-color="#f7f0df"/><stop offset="100%" stop-color="#d8c5ac"/></radialGradient>
+              <linearGradient id="slice" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#fbdfa2"/><stop offset="56%" stop-color="#e9be79"/><stop offset="100%" stop-color="#bf8656"/></linearGradient>
+              <radialGradient id="center" cx="40%" cy="35%" r="80%"><stop offset="0%" stop-color="#faeac0"/><stop offset="100%" stop-color="#eacb90"/></radialGradient>
+              <filter id="shadow"><feGaussianBlur stdDeviation="17"/></filter>
+            </defs>
+            <ellipse cx="260" cy="300" rx="200" ry="118" fill="#291218" opacity=".30" filter="url(#shadow)"/>
+            <ellipse cx="259" cy="230" rx="205" ry="162" fill="#e7d8c0" transform="rotate(-10 259 230)"/>
+            <ellipse cx="259" cy="225" rx="196" ry="154" fill="url(#plate)" transform="rotate(-10 259 225)"/>
+            <ellipse cx="259" cy="225" rx="171" ry="131" fill="none" stroke="#e4d9c8" stroke-width="2" transform="rotate(-10 259 225)"/>
+            <g transform="rotate(-18 240 215)">
+              <ellipse cx="204" cy="246" rx="97" ry="54" fill="#b67e49" opacity=".24"/>
+              <ellipse cx="195" cy="211" rx="83" ry="69" fill="url(#slice)" stroke="#c28f58" stroke-width="3"/>
+              <ellipse cx="195" cy="207" rx="76" ry="60" fill="url(#center)"/>
+              <path d="M157 182 Q197 157 233 195 M149 213 Q200 239 237 218" fill="none" stroke="#dfb783" stroke-width="2" opacity=".65"/>
+              <ellipse cx="281" cy="216" rx="82" ry="67" fill="url(#slice)" stroke="#b78b56" stroke-width="3"/>
+              <ellipse cx="281" cy="212" rx="75" ry="59" fill="url(#center)"/>
+              <path d="M247 194 Q282 170 316 198 M253 224 Q286 244 313 216" fill="none" stroke="#d8ac77" stroke-width="2" opacity=".6"/>
+            </g>
+            <g stroke="#526446" stroke-width="3" stroke-linecap="round" fill="none">
+              <path d="M329 315 Q366 276 398 242"/><path d="M327 320 Q384 302 433 285"/>
+              <path d="M348 289 l-5 -18 M364 272 l16 -7 M382 254 l3 -15 M365 306 l13 10 M386 301 l7 -12 M406 293 l12 6"/>
+            </g>
+            <g fill="#553a30"><circle cx="147" cy="294" r="3"/><circle cx="162" cy="307" r="2.5"/><circle cx="177" cy="294" r="2.2"/><circle cx="351" cy="185" r="3"/><circle cx="365" cy="189" r="2.5"/><circle cx="359" cy="205" r="1.8"/></g>
+          </svg>
+          <div class="hero-seal">FAIT<br><em>avec soin</em><br>✦</div>
+          <span class="art-caption">UNE RECETTE DE FAMILLE, À GARDER.</span>
+        </div>
+      </section>
+
+      <div class="facts-bar" aria-label="Les temps essentiels">
+        <div class="fact"><span class="fact-index">01 /</span><div><strong>1 h</strong><span>Repos après assaisonnement</span></div></div>
+        <div class="fact"><span class="fact-index">02 /</span><div><strong>30–45 min</strong><span>Immersion hors du feu</span></div></div>
+        <div class="fact"><span class="fact-index">03 /</span><div><strong>48 h min.</strong><span>Repos au réfrigérateur</span></div></div>
+      </div>
+
+      <div class="main-grid" id="preparer">
+        <aside class="sidebar">
+          <section class="panel ingredients-panel" aria-labelledby="ingredientsTitle">
+            <div class="panel-kicker">LES INGRÉDIENTS</div>
+            <h2 id="ingredientsTitle">À la bonne <em>dose.</em></h2>
+            <p class="muted">Ajuste le poids de foie : les quantités se calculent toutes seules.</p>
+            <label class="weight-label" for="weightInput">Poids de ton foie</label>
+            <div class="weight-control">
+              <button id="weightMinus" aria-label="Retirer 100 grammes" type="button">−</button>
+              <div class="weight-field"><input id="weightInput" inputmode="numeric" type="number" value="1000" min="100" max="10000" step="50" aria-describedby="weightHelp"><span>g</span></div>
+              <button id="weightPlus" aria-label="Ajouter 100 grammes" type="button">+</button>
+            </div>
+            <div class="quick-weights" role="group" aria-label="Poids rapides">
+              <button type="button" data-weight="500">500 g</button>
+              <button type="button" data-weight="750">750 g</button>
+              <button type="button" data-weight="1000">1 kg</button>
+              <button type="button" data-weight="1500">1,5 kg</button>
+            </div>
+            <span id="weightHelp" class="sr-only">Poids entre 100 grammes et 10 kilos.</span>
+            <div class="ingredient-list">
+              <div class="ingredient-row"><span>Foie gras cru</span><b><span id="foieQty">1 000</span> g</b></div>
+              <div class="ingredient-row"><span>Sel</span><b><span id="saltQty">12</span> g</b></div>
+              <div class="ingredient-row"><span>Poivre</span><b><span id="pepperQty">3</span> g</b></div>
+              <div class="ingredient-row"><span>Sucre</span><b><span id="sugarQty">1</span> g</b></div>
+            </div>
+            <div class="ingredient-foot">Proportions de la recette originale, pour 1 kg : 12 g / 3 g / 1 g.</div>
+          </section>
+
+          <div class="sidebar-note">
+            <span class="note-symbol">✳</span>
+            <p>Une cuisine qui ne se presse pas.</p>
+            <span>Prends ton temps, on s’occupe des minuteurs.</span>
+          </div>
+          <button type="button" class="reset-link" id="resetAll">↺ Recommencer la recette</button>
+        </aside>
+
+        <div class="recipe-content">
+          <section class="section-head" aria-label="Suivi de la recette">
+            <div>
+              <p class="panel-kicker">LE PAS-À-PAS</p>
+              <h2>À toi de <em>jouer.</em></h2>
+              <p class="muted">Coche les étapes au fur et à mesure, ou laisse-toi guider.</p>
+            </div>
+            <div class="completion-box"><span class="completion-value" id="doneCount">0 <small>/ 10</small></span><span>étapes terminées</span><div class="overall-track"><span id="overallFill"></span></div></div>
+          </section>
+
+          <div class="view-bar">
+            <div class="view-switch" role="group" aria-label="Affichage des étapes">
+              <button type="button" class="is-active" data-mode="all" aria-pressed="true">Toutes les étapes</button>
+              <button type="button" data-mode="guide" aria-pressed="false">Mode guidé</button>
+            </div>
+            <span class="autosave-label"><span class="save-dot"></span> Progression mémorisée</span>
+          </div>
+
+          <div class="guide-navigation" id="guideNavigation" hidden>
+            <span id="guideProgress">Étape 1 sur 6</span>
+            <div class="guide-arrows"><button type="button" id="phasePrev" aria-label="Phase précédente">←</button><button type="button" id="phaseNext" aria-label="Phase suivante">→</button></div>
+          </div>
+
+          <section class="phase" data-phase="0" aria-labelledby="phase0title">
+            <div class="phase-heading"><span class="phase-number">01</span><div><p class="phase-kicker">D’ABORD</p><h3 id="phase0title">Préparer le foie</h3></div></div>
+            <div class="step-list">
+              <label class="step" data-step="1"><input type="checkbox"><span class="step-check" aria-hidden="true">✓</span><span class="step-body"><strong>Déveiner délicatement</strong><span>Retire les veines du foie autant que possible, sans trop le défaire.</span></span></label>
+              <label class="step" data-step="2"><input type="checkbox"><span class="step-check" aria-hidden="true">✓</span><span class="step-body"><strong>Assaisonner</strong><span>Répartis le sel, le poivre et le sucre sur les morceaux de foie.</span></span></label>
+            </div>
+          </section>
+
+          <section class="phase" data-phase="1" aria-labelledby="phase1title">
+            <div class="phase-heading"><span class="phase-number">02</span><div><p class="phase-kicker">LAISSER LE TEMPS FAIRE</p><h3 id="phase1title">Laisser reposer</h3></div></div>
+            <div class="step-list">
+              <label class="step" data-step="3"><input type="checkbox"><span class="step-check" aria-hidden="true">✓</span><span class="step-body"><strong>1 heure de repos</strong><span>Après l’assaisonnement, laisse reposer le foie. Place-le au frais pendant cette attente.</span></span></label>
+            </div>
+            <div class="timer-card" data-timer-card="rest">
+              <div class="timer-top"><div><span class="timer-overline">MINUTEUR 01</span><h4>Le repos</h4></div><span class="timer-icon" aria-hidden="true">◷</span></div>
+              <div class="timer-time" data-count-for="rest" role="timer" aria-label="Temps restant pour le repos">01:00:00</div>
+              <div class="timer-track"><span data-progress-for="rest"></span></div>
+              <div class="timer-meta"><span data-status-for="rest">Prêt à démarrer</span><span data-end-for="rest">60 minutes</span></div>
+              <div class="timer-buttons">
+                <button type="button" class="button-primary" data-timer-action="start" data-for="rest">Démarrer le minuteur</button>
+                <button type="button" class="button-outline" data-timer-action="pause" data-for="rest" hidden>Pause</button>
+                <button type="button" class="button-quiet" data-timer-action="reset" data-for="rest">↺</button>
+              </div>
+            </div>
+          </section>
+
+          <section class="phase" data-phase="2" aria-labelledby="phase2title">
+            <div class="phase-heading"><span class="phase-number">03</span><div><p class="phase-kicker">EN DEUX COUCHES</p><h3 id="phase2title">Former les boudins</h3></div></div>
+            <div class="step-list">
+              <label class="step" data-step="4"><input type="checkbox"><span class="step-check" aria-hidden="true">✓</span><span class="step-body"><strong>Rouler dans le film</strong><span>Forme des boudins avec les morceaux de foie. Noue le film alimentaire à chaque extrémité.</span></span></label>
+              <label class="step" data-step="5"><input type="checkbox"><span class="step-check" aria-hidden="true">✓</span><span class="step-body"><strong>Bien serrer</strong><span>Ajoute une deuxième couche de film et serre soigneusement les nœuds.</span></span></label>
+              <label class="step" data-step="6"><input type="checkbox"><span class="step-check" aria-hidden="true">✓</span><span class="step-body"><strong>Envelopper d’aluminium</strong><span>Referme chaque boudin dans du papier aluminium, bien fermé aux extrémités. Utilise un film explicitement adapté à cette cuisson.</span></span></label>
+            </div>
+          </section>
+
+          <section class="phase" data-phase="3" aria-labelledby="phase3title">
+            <div class="phase-heading"><span class="phase-number">04</span><div><p class="phase-kicker">LE MOMENT CLÉ</p><h3 id="phase3title">La cuisson douce</h3></div></div>
+            <div class="step-list">
+              <label class="step" data-step="7"><input type="checkbox"><span class="step-check" aria-hidden="true">✓</span><span class="step-body"><strong>Faire bouillir l’eau</strong><span>Porte une casserole d’eau à ébullition, puis éteins le feu.</span></span></label>
+              <label class="step" data-step="8"><input type="checkbox"><span class="step-check" aria-hidden="true">✓</span><span class="step-body"><strong>Immerger les boudins</strong><span>Plonge les boudins dans l’eau, feu éteint. La recette familiale indique 30 à 45 minutes, avec une préférence pour 45 minutes.</span></span></label>
+            </div>
+            <div class="timer-card timer-card-accent" data-timer-card="cook">
+              <div class="timer-top"><div><span class="timer-overline">MINUTEUR 02</span><h4>L’immersion</h4></div><span class="timer-icon" aria-hidden="true">♨</span></div>
+              <p class="preset-label">Choisis une durée indicative</p>
+              <div class="cook-presets" role="group" aria-label="Durée d'immersion">
+                <button type="button" data-cook="30">30 min</button>
+                <button type="button" data-cook="35">35 min</button>
+                <button type="button" data-cook="40">40 min</button>
+                <button type="button" data-cook="45" class="is-active">45 min <small>originale</small></button>
+              </div>
+              <div class="timer-time" data-count-for="cook" role="timer" aria-label="Temps restant pour l'immersion">00:45:00</div>
+              <div class="timer-track"><span data-progress-for="cook"></span></div>
+              <div class="timer-meta"><span data-status-for="cook">Prêt à démarrer</span><span data-end-for="cook">45 minutes</span></div>
+              <div class="timer-buttons">
+                <button type="button" class="button-primary" data-timer-action="start" data-for="cook">Démarrer le minuteur</button>
+                <button type="button" class="button-outline" data-timer-action="pause" data-for="cook" hidden>Pause</button>
+                <button type="button" class="button-quiet" data-timer-action="reset" data-for="cook">↺</button>
+              </div>
+              <p class="timer-disclaimer">Le minuteur indique une durée, pas une cuisson sûre : la température à cœur et le barème thermique doivent être vérifiés.</p>
+            </div>
+          </section>
+
+          <section class="phase" data-phase="4" aria-labelledby="phase4title">
+            <div class="phase-heading"><span class="phase-number">05</span><div><p class="phase-kicker">ENCORE UN PEU DE PATIENCE</p><h3 id="phase4title">Refroidir & patienter</h3></div></div>
+            <div class="step-list">
+              <label class="step" data-step="9"><input type="checkbox"><span class="step-check" aria-hidden="true">✓</span><span class="step-body"><strong>Refroidir, puis réfrigérer</strong><span>Fais refroidir rapidement en respectant les règles d’hygiène, puis laisse au réfrigérateur (0 à 4 °C) au moins 2 jours.</span></span></label>
+            </div>
+            <div class="timer-card" data-timer-card="chill">
+              <div class="timer-top"><div><span class="timer-overline">MINUTEUR 03</span><h4>Les 48 heures</h4></div><span class="timer-icon" aria-hidden="true">❄</span></div>
+              <div class="timer-time" data-count-for="chill" role="timer" aria-label="Temps restant pour la réfrigération">48:00:00</div>
+              <div class="timer-track"><span data-progress-for="chill"></span></div>
+              <div class="timer-meta"><span data-status-for="chill">Prêt à démarrer</span><span data-end-for="chill">2 jours</span></div>
+              <div class="timer-buttons">
+                <button type="button" class="button-primary" data-timer-action="start" data-for="chill">Démarrer le minuteur</button>
+                <button type="button" class="button-outline" data-timer-action="pause" data-for="chill" hidden>Pause</button>
+                <button type="button" class="button-quiet" data-timer-action="reset" data-for="chill">↺</button>
+              </div>
+            </div>
+          </section>
+
+          <section class="phase" data-phase="5" aria-labelledby="phase5title">
+            <div class="phase-heading"><span class="phase-number">06</span><div><p class="phase-kicker">LE DERNIER GESTE</p><h3 id="phase5title">C’est prêt !</h3></div></div>
+            <div class="step-list">
+              <label class="step" data-step="10"><input type="checkbox"><span class="step-check" aria-hidden="true">✓</span><span class="step-body"><strong>Déballer et congeler</strong><span>Après les 2 jours au frais, retire le papier aluminium et le film, puis congèle selon la recette d’origine en utilisant un emballage adapté.</span></span></label>
+            </div>
+            <div class="finish-card"><span>✳</span><div><strong>Et voilà.</strong><p>Une recette à refaire, à ajuster, et surtout à partager.</p></div></div>
+          </section>
+
+          <div class="safety-note" id="prudence">
+            <span class="safety-icon" aria-hidden="true">i</span>
+            <div><h4>Un mot sur la sécurité alimentaire</h4><p>Cette page retranscrit une recette familiale, pas un protocole de cuisson validé. Une immersion de 30 à 45 minutes dans l’eau hors du feu ne garantit pas à elle seule la sécurité microbiologique. Respecte strictement l’hygiène, la chaîne du froid et la compatibilité du film avec la cuisson ; utilise un thermomètre et un barème temps/température fiable. <a href="https://www.anses.fr/system/files/GBPH2022SA0137.pdf" target="_blank" rel="noopener noreferrer">Repères de l’Anses ↗</a></p></div>
+          </div>
+          <footer class="footer"><span>✳ LE CARNET DE CUISINE</span><span>Recette transmise par SMS · Mise en page avec soin</span></footer>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div class="timer-dock" id="timerDock" hidden>
+    <span class="dock-pulse"></span><div class="dock-label"><strong id="dockTitle">Minuteur en cours</strong><span id="dockHint">La page garde le compte à rebours</span></div><strong class="dock-time" id="dockTime">00:00:00</strong><button type="button" id="dockView">Voir <span aria-hidden="true">↑</span></button>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>
