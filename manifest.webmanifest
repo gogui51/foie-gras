@@ -1,0 +1,19 @@
+{
+  "name": "Le foie gras maison — Carnet de cuisine",
+  "short_name": "Foie gras",
+  "description": "La recette de foie gras maison avec minuteurs et proportions.",
+  "lang": "fr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "theme_color": "#542b35",
+  "background_color": "#fbf8f3",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
