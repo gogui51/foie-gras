@@ -10,6 +10,7 @@ Un petit carnet de cuisine interactif, sans serveur ni compte utilisateur.
 - Fournit trois minuteurs indépendants : repos (1 h), immersion (30 à 45 min) et réfrigération (48 h).
 - Mémorise les étapes et minuteurs avec `localStorage`. En rouvrant la page, le temps écoulé est recalculé.
 - S'adapte au mobile et propose une mise en page imprimable.
+- Le bouton « Écran allumé » utilise l’API Screen Wake Lock lorsqu’elle est autorisée (Safari iOS 18.4 et plus récent, autres navigateurs compatibles). Il tente de garder l’écran actif à l’ouverture de la page et mémorise la préférence. Si le navigateur refuse l’activation automatique, toucher le bouton pour retenter. La protection s’arrête lorsque la page n’est plus visible ou si le système la révoque ; elle ne bloque jamais le verrouillage manuel.
 
 **Limite technique :** sans serveur de notifications push, la sonnerie n'est pas garantie lorsque le navigateur ferme ou suspend la page. Le minuteur reste cependant calculé d'après l'heure réelle.
 
@@ -28,6 +29,7 @@ Le site doit ensuite être visible à l'adresse https://gogui51.github.io/foie-g
 - `index.html` : la recette, les cartes et les boutons.
 - `style.css` : le design et le responsive.
 - `app.js` : les calculs et minuteurs.
+- `wake-lock.js` : maintien de l’écran allumé quand le navigateur le permet.
 - `manifest.webmanifest` et `icon.svg` : paramètres d'affichage sur écran d'accueil.
 - `.github/workflows/deploy.yml` : publication automatique à chaque modification sur la branche `main`.
 
